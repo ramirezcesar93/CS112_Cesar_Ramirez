@@ -11,17 +11,13 @@ public class week13lab1Test {
         testInterface[] intObjects = new testInterface[2];
         intObjects[0] = new week13lab1Dice();
         intObjects[1] = new week13lab1Card();
-        int [] hist = new int[100];
-        int arrayCount=0;
         for (testInterface current : intObjects){
             int num = current.getNumber();
-            System.out.println("Method num is "+num);
-            hist[arrayCount] = num;
-            arrayCount++;
+            System.out.println("Method num is "+ num);
+            System.out.println("History num is "+ current.getHistory());
         }
-        for(int i=0;i<arrayCount;i++){
-            System.out.println("History num is "+ hist[i]);
-        }
+            
+        
     }
     
 }
