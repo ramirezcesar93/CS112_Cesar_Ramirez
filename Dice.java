@@ -1,4 +1,5 @@
 
+import java.util.Random;
 import javax.swing.JOptionPane;
 
 public class Dice implements Runnable{
@@ -10,8 +11,14 @@ public class Dice implements Runnable{
     private int userGuess[] = new int[100];
     private int diceValue[] = new int[100];
 
-    public Dice() {
+    
+    private String tName;
+    private int sleep;
+    private Random gen = new Random();
+    public Dice(String name) {
         mBounces = 1;
+        tName = name;
+        sleep =1+ gen.nextInt(5000);
     }
 
     public Dice(int bounces) {
@@ -26,7 +33,7 @@ public class Dice implements Runnable{
             sum += diceVal;
         }
         average = sum / mBounces;
-        System.out.println(average);
+        System.out.println("Thread is: "+ tName + " Value is: "+ average+ " Sleep time is "+sleep);
     }
 
     public int value() {
