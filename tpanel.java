@@ -24,12 +24,10 @@ public class tpanel extends JPanel {
         cx += fm.stringWidth("Hello, ");
         g.setFont(fi);
         g.drawString("Cesar!", cx, cy);
-        g.setColor(Color.red);
-        g.drawOval(200, 100, 50, 100);
     } //paintComponent
 
     public static void main(String[] args){
-    JFrame test =  new lab2("Lab 2");
+    JFrame test =  new lab3("Lab 3");
     test.show();
 }
 }
