@@ -108,4 +108,4 @@ static String getComputerMove(){
         }
      }
 }
-
+// Good...any reason you chose to use static method?
